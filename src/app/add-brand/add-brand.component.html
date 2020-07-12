@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <div class="container">
+        <h2>Adding new brand...</h2>
+    </div>
+  </div>
+<div class="container">
+    <form (ngSubmit)="save()" #Form="ngForm">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Cpu Brand</label>
+            <input type="text" required [(ngModel)]="brand.brandName" name="brandName" class="form-control col" placeholder="Enter new brand"/>
+        </div>
+        <button type="submit" class="btn btn-outline-success" [disabled]="!Form.valid">
+            Add to database
+          </button>
+    </form>
+</div>
